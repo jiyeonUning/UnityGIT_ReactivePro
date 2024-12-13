@@ -1,6 +1,5 @@
 using DG.Tweening;
-using System.Collections;
-using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class DOTweenTester : MonoBehaviour
@@ -17,7 +16,6 @@ public class DOTweenTester : MonoBehaviour
         if (Physics.Raycast(ray, out RaycastHit hitInfo)) MoveTo(hitInfo.point);
     }
 
-
     public void MoveTo(Vector3 des)
     {
         transform.DOMove(des, 1f)
@@ -28,3 +26,5 @@ public class DOTweenTester : MonoBehaviour
         material.DOColor(Random.ColorHSV(), 0.5f);
     }
 }
+
+
