@@ -44,6 +44,7 @@ public class LinqTester : MonoBehaviour
         var autoLockOn = from target in Physics.OverlapSphere(transform.position, 3f)
                          where target.gameObject.layer == LayerMask.NameToLayer("Monster")
                          where Vector3.Distance(transform.position,target.transform.position) < 3f
+                         orderby target ascending
                          select target;
     }
 
